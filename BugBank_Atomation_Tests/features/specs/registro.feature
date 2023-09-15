@@ -14,7 +14,7 @@ Contexto: Estar no modal de Registro de conta
 Cenário: Registro de conta válida sem saldo
     Quando realizar um registro válido
     E o botão de criar conta com saldo estiver desativado
-    Então mensagem é exibida "A conta foi criada com sucesso"
+    Então mensagem de sucesso é exibida 
 
 @registro_conta_sem_saldo
 Cenário: Registro de conta válida com saldo

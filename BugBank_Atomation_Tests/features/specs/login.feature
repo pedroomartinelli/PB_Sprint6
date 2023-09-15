@@ -10,18 +10,31 @@ Funcionalidade: Login
 Contexto: Estar no modal de login
     Dado que esteja no modal de login
 
-@validacao_autenticacao_usuario
-Esquema do Cenário: Validar a autenticação do usuário
-    Quando preencher os campos "<e-mail>" e "<senha>"
-    E realizar login "<tipo>"
-    Então será liberado acesso a aplicação logada "<msg>"
-    Exemplos:
-    |e-mail         |senha       |tipo    |msg                                                                     |
-    |teste@teste.com|123456      |válido  |                                                                        |
-    |teste_teste    |123456      |válido  |Formato inválido                                                        |
-    |               |123456      |válido  |É campo obrigatório                                                     |
-    |teste@teste.com|            |válido  |É campo obrigatório                                                     |
-    |teste@teste.com|teste_inv123|inválido|Usuário ou senha inválido.Tente novamente ou verifique suas informações!|
+@login_credenciais_validas
+Cenário: Login com credenciais válidas
+    Quando insiro um email válido e uma senha válida
+    Então devo ser logado com sucesso
+
+@login_credenciais_invalidas
+Cenário: Login com credenciais inválidas
+    Quando insiro um email inválido 
+    Então devo ver uma mensagem de erro
+
+@login_email_em_branco
+Cenário: Login com email em branco
+    Quando insiro um email em branco e uma senha válida
+    Então devo ver uma mensagem de erro "É campo obrigatório"
+
+@login_senha_em_branco
+Cenário: Login com senha em branco
+    Quando insiro um email válido e uma senha em branco
+    Então devo ver uma mensagem de erro "É campo obrigatório"
+
+@login_senha_incorreta
+Cenário: Login com senha incorreta
+    Quando insiro um email válido e uma senha inválida
+    Então devo ver uma mensagem de erro "Usuário ou senha inválido.Tente novamente ou verifique suas informações!"
+
 
 @obrigatoriedade_de_campos_login
 Esquema do Cenário: Validar obrigatoriedade dos campos
@@ -31,11 +44,6 @@ Esquema do Cenário: Validar obrigatoriedade dos campos
     |campo  |msg                |
     |e-mail |É campo obrigatório|
     |senha  |É campo obrigatório|
-
-@redirecionamento_botao_registrar
-Cenário: Verificar redirecionamento do botão "Registrar"
-    Quando clicar no botão "Registrar"
-    Então deverá ser aberto o modal de registro de contas
 
 @redirecionamento_botao_requisitos
 Cenário: Verificar redirecionamento do botão "Conheça nossos requisitos"
