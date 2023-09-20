@@ -5,6 +5,8 @@ module Sections
         element :input_senha, '.card__login input[name="password"]'
         element :btn_acessar, '.otUnI'
         element :btn_registrar, '.ihdmxA'
-        element :warning, '.kOeYBn .input__warging'
+        elements :avisos_login, '.card__login .input__warging'
+        elements :inputs_elements_login, '.card__login .input__default'
+        element :btn_requisitos, '.login__link a'
     end
 end

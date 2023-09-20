@@ -12,48 +12,35 @@ Contexto: Estar no modal de login
 
 @login_credenciais_validas
 Cenário: Login com credenciais válidas
-    Quando insiro um email válido e uma senha válida
-    Então devo ser logado com sucesso
+    Quando insere um email válido e uma senha válida
+    Então é logado com sucesso
 
-@login_credenciais_invalidas
+@login_email_invalido
 Cenário: Login com credenciais inválidas
-    Quando insiro um email inválido 
-    Então devo ver uma mensagem de erro
+    Quando insere um email inválido
+    Então deverá ver uma mensagem de erro
+
+@login_senha_invalida
+Cenário: Login com senha incorreta
+    Quando insere um email válido e uma senha inválida
+    Então deverá ver uma mensagem de erro
 
 @login_email_em_branco
 Cenário: Login com email em branco
-    Quando insiro um email em branco e uma senha válida
-    Então devo ver uma mensagem de erro "É campo obrigatório"
+    Quando insere um email em branco e uma senha válida
+    Então deverá ver uma mensagem de erro "É campo obrigatório"
 
 @login_senha_em_branco
 Cenário: Login com senha em branco
-    Quando insiro um email válido e uma senha em branco
+    Quando insere um email válido e uma senha em branco
     Então devo ver uma mensagem de erro "É campo obrigatório"
 
-@login_senha_incorreta
-Cenário: Login com senha incorreta
-    Quando insiro um email válido e uma senha inválida
-    Então devo ver uma mensagem de erro "Usuário ou senha inválido.Tente novamente ou verifique suas informações!"
-
-
 @obrigatoriedade_de_campos_login
-Esquema do Cenário: Validar obrigatoriedade dos campos
-    Quando clicar no campo "<campo>"
-    Então o sistema deverá exibir uma mensagem "<msg>"
-    Exemplos:
-    |campo  |msg                |
-    |e-mail |É campo obrigatório|
-    |senha  |É campo obrigatório|
-
+Cenário: Validar obrigatoriedade dos campos
+    Quando clicar no campo 
+    Então devo ver uma mensagem de erro "É campo obrigatório"
+    
 @redirecionamento_botao_requisitos
 Cenário: Verificar redirecionamento do botão "Conheça nossos requisitos"
     Quando clicar no botão "Conheça nossos requisitos"
-    Então deverá ser direcionado para a página "requeriments"##############
-
-@redirecionamento_botao_acessar ###########################################
-Cenário: Verificar redirecionamento do botão "Acessar" 
-    Quando clicar no botão "Acessar"
-    E a conta for válida
-    Então deverá ter acesso a home da conta
-
-
+    Então deverá ser direcionado para a página de requisitos

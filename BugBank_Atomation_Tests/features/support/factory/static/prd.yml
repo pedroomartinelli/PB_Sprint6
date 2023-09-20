@@ -1,0 +1,18 @@
+user_for_login:
+  email: '1234@gmail.com'
+  password: '123456'
+
+user_for_invalid_login:
+  email: 'invalid@gmail.com'
+  password: 'invalidpass123'
+
+user_for_register:
+  email: '1234@gmail.com'
+  name: 'Pedro'
+  password: '123456'
+
+user_for_invalid_register:
+  email: 'invalid@invalid'
+  name: '123'
+  password: '123456'
+  password_confirmation: 'abcdef'

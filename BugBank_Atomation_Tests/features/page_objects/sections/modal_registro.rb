@@ -7,7 +7,10 @@ module Sections
         element :input_confirmation_pass, '.card__register input[name="passwordConfirmation"]'
         element :btn_cadastrar, '.CMabB'
         element :btn_conta_sem_saldo, '.kIwoPV'
-        element :btn_conta_com_saldo, '.fLTrsw'
+        element :btn_conta_com_saldo, '.hsmFIT'
         element :btn_voltar_para_login, '#btnBackButton'
+        element :btn_requisitos, '.login__link a'
+        elements :avisos_registro, '.card__register .input__warging'
+        elements :register_inputs, '.card__register .input__default'
     end
 end
