@@ -2,7 +2,6 @@
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/pedroomartinelli/PB_Sprint5)
 ![GitHub contributors](https://img.shields.io/github/contributors/pedroomartinelli/PB_Sprint5)
-![Static Badge](https://img.shields.io/badge/pedr1o-%20100%25-green?logo=cucumber&label=Coverage%20Tests&labelColor=black&color=Green)
 ![Static Badge](https://img.shields.io/badge/Status-Development-yellow?label=Status&labelColor=black&color=yellow)
 ![Static Badge](https://img.shields.io/badge/Programming%20Language-Ruby3.2.2-red?logo=ruby&label=Programming%20Language&labelColor=black&color=red) 
 ![GitHub stars](https://img.shields.io/github/stars/pedroomartinelli/PB_Sprint5?style=social)
