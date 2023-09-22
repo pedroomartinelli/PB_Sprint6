@@ -8,7 +8,8 @@ Funcionalidade: Página Home
     PARA poder gerir minha contas
 
 Contexto: Estar na página home
-    Dado que esteja na página home da conta
+    Dado que esteja logado na conta
+    E esteja na página home da conta
 
 @acesso_transferencia
 Cenário: Acessar funcionalidade de transferências
@@ -34,3 +35,7 @@ Cenário: Acessar funcionalidade de saque
 Cenário: Visualizar saldo
     Então o sistema deverá apresentar o saldo da conta
 
+@logout
+Cenário: Validar logaut de conta
+    Quando acessar o botão Sair
+    Então o usuário deve ser deslogado

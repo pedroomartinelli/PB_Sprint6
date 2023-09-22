@@ -33,12 +33,12 @@ Cenário: Login com email em branco
 @login_senha_em_branco
 Cenário: Login com senha em branco
     Quando insere um email válido e uma senha em branco
-    Então devo ver uma mensagem de erro "É campo obrigatório"
+    Então deverá ver uma mensagem de erro "É campo obrigatório"
 
 @obrigatoriedade_de_campos_login
 Cenário: Validar obrigatoriedade dos campos
     Quando clicar no campo 
-    Então devo ver uma mensagem de erro "É campo obrigatório"
+    Então deverá ver uma mensagem de erro "É campo obrigatório"
     
 @redirecionamento_botao_requisitos
 Cenário: Verificar redirecionamento do botão "Conheça nossos requisitos"

@@ -10,6 +10,7 @@ module Pages
         element :label_mensagem, '#modalText'
         element :btn_fechar_modal_sucesso, '#btnCloseModal'
         element :btn_requisitos, '.login__link a'
+        element :texto_modal, '#modalText'
 
         def login_msg_verify(mensagem)
             if (modal_login.avisos_login[0].text || modal_login.avisos_login[1].text) == mensagem
@@ -97,6 +98,7 @@ module Pages
             modal_registro.input_confirmation_pass.set @senha
             modal_registro.btn_conta_sem_saldo.click
             modal_registro.btn_cadastrar.click
+            wait_until_texto_modal_visible
             btn_fechar_modal_sucesso.click   
         end
 
@@ -122,6 +124,23 @@ module Pages
             register_acc_balance_on
             login_acc
             modal_login.btn_acessar.click
+        end
+
+        def register_for_transfer
+            modal_login.btn_registrar.click
+            register_acc_balance_off
+            modal_registro.btn_cadastrar.click
+            
+            txt_conta = texto_modal.text.match(/(\d+)-(\d+)/)
+            conta = {
+                num_conta: txt_conta[1],
+                digito: txt_conta[2]
+            }
+            return conta
+        end
+
+        def wait_for_login
+            wait_until_modal_login_visible
         end
          
     end

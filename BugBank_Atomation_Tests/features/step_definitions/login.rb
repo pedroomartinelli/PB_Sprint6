@@ -33,6 +33,12 @@ Quando('insere um email em branco e uma senha válida') do
     @pagina_principal.modal_login.input_email.set ''
     @pagina_principal.modal_login.btn_acessar.click
 end
+
+Quando('insere um email válido e uma senha em branco') do
+    @pagina_principal.login_acc
+    @pagina_principal.modal_login.input_senha.set ''
+    @pagina_principal.modal_login.btn_acessar.click
+end
   
 Então('deverá ver uma mensagem de erro {string}') do |mensagem|
     expect(@pagina_principal.login_msg_verify(mensagem)).to be_truthy

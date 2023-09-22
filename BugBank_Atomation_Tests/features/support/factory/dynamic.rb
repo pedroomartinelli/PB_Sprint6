@@ -4,7 +4,8 @@ module Factory
     class Dynamic
         def self.transfer_data
             {
-                valor: Faker::Number.between(from: 1, to: 1000)
+                numero_conta: Faker::Bank.account_number(digits: 3),
+                descricao: Faker::Lorem.paragraph
             }
         end
 
