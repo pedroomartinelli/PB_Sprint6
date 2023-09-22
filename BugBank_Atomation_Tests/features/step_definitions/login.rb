@@ -3,6 +3,7 @@ Dado('que esteja no modal de login') do
     @pagina_requisitos = Pages::PaginaRequisitos.new    
     @pagina_principal.load
     @pagina_principal.register_acc_balance_on
+    @pagina_principal.modal_login.wait_btn_acessar_visible
 end
   
 Quando('insere um email válido e uma senha válida') do
@@ -15,6 +16,7 @@ Então('é logado com sucesso') do
 end
 
 Quando('insere um email inválido') do
+    @pagina_principal.modal_login.wait_btn_acessar_visible
     @pagina_principal.fill_invalid_email_login
     @pagina_principal.modal_login.btn_acessar.click
 end
@@ -24,6 +26,7 @@ Então('deverá ver uma mensagem de erro') do
 end
 
 Quando('insere um email válido e uma senha inválida') do
+    @pagina_principal.modal_login.wait_btn_acessar_visible
     @pagina_principal.fill_invalid_pass_login
     @pagina_principal.modal_login.btn_acessar.click
 end

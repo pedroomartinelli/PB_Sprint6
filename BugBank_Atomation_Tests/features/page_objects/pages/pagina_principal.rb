@@ -99,7 +99,7 @@ module Pages
             modal_registro.btn_conta_sem_saldo.click
             modal_registro.btn_cadastrar.click
             wait_until_texto_modal_visible
-            btn_fechar_modal_sucesso.click   
+            btn_fechar_modal_sucesso.click 
         end
 
         def register_acc_balance_off
@@ -141,8 +141,7 @@ module Pages
 
         def wait_for_login
             wait_until_modal_login_visible
-        end
-         
+        end         
     end
 end
 

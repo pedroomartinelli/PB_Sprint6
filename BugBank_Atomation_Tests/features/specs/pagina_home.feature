@@ -36,6 +36,6 @@ Cenário: Visualizar saldo
     Então o sistema deverá apresentar o saldo da conta
 
 @logout
-Cenário: Validar logaut de conta
+Cenário: Validar logout de conta
     Quando acessar o botão Sair
     Então o usuário deve ser deslogado
