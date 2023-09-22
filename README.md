@@ -1,3 +1,4 @@
+![Imagem do WhatsApp de 2023-09-21 à(s) 22 19 35](https://github.com/pedroomartinelli/PB_Sprint6/assets/141445664/d29b474e-b5e9-4e3e-ba09-177fd326b15c)
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/pedroomartinelli/PB_Sprint5)
 ![GitHub contributors](https://img.shields.io/github/contributors/pedroomartinelli/PB_Sprint5)
