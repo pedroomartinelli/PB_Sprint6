@@ -9,7 +9,7 @@
 
 # Projeto de Automação de Testes
 
-Este projeto é uma automação de testes utilizando Cucumber, SitePrism e Capybara em Ruby 3.2.2, executado no sistema operacional Windows 10. Os testes foram criados para o site [Advantage Online Shopping](http://www.advantageonlineshopping.com/#/).
+Este projeto é uma automação de testes utilizando Cucumber, SitePrism e Capybara em Ruby 3.2.2, executado no sistema operacional Windows 10. Os testes foram criados para o site BugBank
 
 ## Mapa Mental 🗺️
 Este é o mapa mental criado para os fluxos de testes.
